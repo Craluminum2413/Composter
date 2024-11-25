@@ -148,7 +148,12 @@
         "variantByGroup": "side",
         "variantByGroupInventory": null
     },
-    "behaviors": [{ "name": "Lockable" }, { "name": "Container" }],
+    "behaviors": [
+        { "name": "Lockable" },
+        { "name": "Container" },
+        { "name": "BoatableGenericTypedContainer" }
+    ],
+    "entityBehaviors": [{ "name": "Animatable" }], // crashes without this behavior
     "variantgroups": [{ "code": "side", "loadFromProperties": "game:abstract/horizontalorientation" }],
     "creativeinventory": {},
     "creativeinventoryStacksByType": {
@@ -174,12 +179,12 @@
         ]
     },
     "heldTpIdleAnimation": "holdunderarm",
-    "shapeInventory": { "base": "composter:block/composter-0" },
+    "shapeInventory": { "base": "composter:block/composter" },
     "shapeByType": {
-        "*-north": { "rotateY": 0 },
-        "*-east": { "rotateY": 270 },
-        "*-west": { "rotateY": 90 },
-        "*-south": { "rotateY": 180 }
+        "*-north": { "base": "composter:block/composter", "rotateY": 0 },
+        "*-east": { "base": "composter:block/composter", "rotateY": 270 },
+        "*-west": { "base": "composter:block/composter", "rotateY": 90 },
+        "*-south": { "base": "composter:block/composter", "rotateY": 180 }
     },
     "textures": {
         "acacia-lid": { "base": "game:block/wood/debarked/acacia" },
